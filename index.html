@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <title>SDLC</title>
+</head>
+
+<body>
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+  <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active,
+    .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+  <h1>SDLC</h1>
+  <h2>Software development life cycle</h2>
+  <button class="accordion">Planning and Requirement Analysis</button>
+  <div class="panel">
+    <p>This stage is performed by the senior members and with input from the customer, which is then used to plan the basic project approach</p>
+  </div>
+  <button class="accordion">Defining Requirements</button>
+  <div class="panel">
+    <p>At this stage the products requirements are defined and approved by the customer.</p>
+  </div>
+  <button class="accordion">Designing the Product Architecture</button>
+  <div class="panel">
+    <p>At this stage the products architecture is defined.</p>
+  </div>
+  <button class="accordion">Building or Developing the Product</button>
+  <div class="panel">
+    <p>At this stage the product is developed by the developers, whom must follow the coding guidelines defined by their organization and programming tools.</p>
+  </div>
+  <button class="accordion">Testing the Product</button>
+  <div class="panel">
+    <p>At this stage the product is tested and fixed to be ready for the deployment.</p>
+  </div>
+  <button class="accordion">Deployment in the Market and Maintenance</button>
+  <div class="panel">
+    <p>At this stage the product is deployed and maintained according to the feedback that the product is getting.</p>
+  </div>
+</body>
+
+</html>
